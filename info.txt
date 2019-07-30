@@ -1,0 +1,8 @@
+horacio.estevez@gmail.com
+
+
+GIT
+
+- rebase
+- revert
+- reset 

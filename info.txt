@@ -2,6 +2,5 @@ profe : horacio.estevez@gmail.com
 slack : react-fizzmod
 https://github.com/HoracioGutierrez/fizzmod-front-end
 
-- hacer dos branch
-- hacer un archivo distinto en cada branch, como minimo 
-- tener como minimo dos commits en cada branch 
+git revert <commit> : Revierte los cambios de uno o mas commits o un branch entero generando mas historial en el grafo. Ideal cuando lo que quiero revertir ya esta pusheado. 
+

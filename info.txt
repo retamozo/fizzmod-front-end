@@ -1,8 +1,2 @@
-horacio.estevez@gmail.com
-
-
-GIT
-
-- rebase
-- revert
-- reset 
+profe : horacio.estevez@gmail.com
+slack : react-fizzmod

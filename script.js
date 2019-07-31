@@ -118,9 +118,6 @@ for (let index = 0; index < 5; index++) {
 
 ul.appendChild(f);
 
-console.dir(f);
-console.log(f);
-
 /**
  * 
  * La mayoria de las m,anipulaciones del DOM activan un relayout : 
@@ -129,3 +126,55 @@ console.log(f);
  * - painting : Es lo que tarda el interprete de CSS en pintar lo que se cambio en el rendering 
  * 
  */
+
+//Eventos
+let btn = document.querySelector("button")
+//btn.onclick = console.log('Hola Mundo')
+/* 
+btn.onclick = bar;
+btn.onclick = function(){
+    console.log("Segundo Callback")
+}
+
+function bar(){
+    console.log("Hola Mundo")
+} 
+*/
+
+/* document.body.addEventListener("click",e=>{
+    e.stopPropagation();
+    console.log("Click del body")
+},true);
+
+btn.addEventListener("click",e=>{
+    e.stopPropagation();
+    console.log("Hola Mundo")
+},true); */
+
+btn.addEventListener("click",e=>{
+    e.stopPropagation();
+    console.log("Hola Mundo 2");
+    var btn_nuevo = document.createElement("button");
+    btn_nuevo.id = "nuevo"
+    btn_nuevo.innerText = "Nuevo Boton"
+    //btn_nuevo.addEventListener("··")
+    document.body.appendChild(btn_nuevo)
+}/*,true*/);
+
+/**
+ * Propagacion de Eventos : 
+ * 
+ * - Bubbling : (Burbujeo) Propaga desde adentro hacia afuera 
+ * 
+ * - Capturing : El inverso al bubbling 
+ * 
+ */
+
+//var nuevo = document.getElementById("nuevo")
+//nuevo.addEventListener("click",()=>{})
+
+document.body.addEventListener("click",e=>{
+   if (e.target.id == "nuevo") {
+       console.log("Click del boton nuevo")
+   }
+})

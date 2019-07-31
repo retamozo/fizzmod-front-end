@@ -91,7 +91,41 @@ var titulos = document.querySelectorAll("#titulo");
 var titulos = document.querySelectorAll(".titulo");
 var titulos = document.querySelectorAll("h1");
 
-console.log(titulos);
 
 //Creacion de Nodo 
-var a = document.createElement("a")
+var a = document.createElement("a");
+a.innerText = "lo que sea";
+a.href = "http://google.com";
+//a.innerHTML = "<p>lo que sea</p>";
+
+var a_copia = a.cloneNode(true);
+
+//NodoTarget.appendChild(nuevoNodo);
+document.body.appendChild(a);
+titulos[0].appendChild(a_copia);
+
+//XSS = Cross-Site Scripting 
+
+var ul = document.querySelector("ul");
+let f = document.createDocumentFragment();
+
+for (let index = 0; index < 5; index++) {
+    var li = document.createElement("li");
+    li.innerText = `Item ${index}`;
+    //ul.appendChild(li);
+    f.appendChild(li);
+}
+
+ul.appendChild(f);
+
+console.dir(f);
+console.log(f);
+
+/**
+ * 
+ * La mayoria de las m,anipulaciones del DOM activan un relayout : 
+ * 
+ * - rendering : Es lo que tarda el interprete de HTML en calcular la geometria de cada nodo
+ * - painting : Es lo que tarda el interprete de CSS en pintar lo que se cambio en el rendering 
+ * 
+ */

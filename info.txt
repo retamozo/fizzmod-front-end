@@ -29,3 +29,6 @@ tag :
 git tag -a <nombre> -m <subject> : Genera un tag anotado , una version de lanzamiento del proyecto. Estos se pushean aparte. 
 
 git stash : es un espacio temporal donde guardar trabajo que no queremos commitear. Este trabajo se puede restaurar en cualquier momento sobre cualquier branch. 
+
+
+//http://vanilla-js.com/

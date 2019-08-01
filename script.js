@@ -187,13 +187,18 @@ document.body.addEventListener("click",e=>{
  * a : click
  * 
  */
-
+/* 
 var a = document.querySelector("a")
 a.addEventListener("click", e => {
     e.preventDefault();
     //Usamos prevent default porque hay algunos elementos en la sesion que vienen con comportamientos predefinidos y en algunos casos no queremos que eso pase, entonces para cancelar eso, desde el objeto Event ejecutamos su metodo Event.preventDefault()
     console.log("Click")
-})
+}) */
+
+var p = document.createElement("p")
+//p.innerText = "lorem ipsum"
+let texto = document.createTextNode("Lorem Ipsum")
+p.appendChild(texto)
 
 /**
  * Subir todo el trabajo en un branch nuevo y pushearlo a un repo en GitHub 
@@ -206,5 +211,56 @@ a.addEventListener("click", e => {
  * 6) Si se hace click en aceptar , se tiene que redirigir al usuario al href del <a>
  * 7) Si se hace click en cancelar, se tiene que borrar el mensaje 
  * 
- * 
  */
+
+var a = document.querySelector("a")
+/* 
+DELEGAR LOS EVENTOS DEL CLICK 
+
+aceptar.addEventListener("click",()=>{
+    algunCallback()
+})
+
+cancelar.addEventListener("click",()=>{
+    document.body.removeChild(div)
+})
+ */
+a.addEventListener("click",e=>{
+    e.preventDefault()
+
+    var p = document.createElement("p")
+    var div = document.createElement("div")
+    var aceptar = document.createElement("button")
+    var cancelar = document.createElement("button")
+
+    p.innerText = "Esta seguro que quiere abandonar la página"
+    aceptar.innerText = "Aceptar"
+    cancelar.innerText = "Cancelar"
+
+    aceptar.addEventListener("click",()=>{
+        /* location = a.href
+        location.href = a.href */
+        location.href = e.target.href
+    }) 
+
+    //aceptar.addEventListener("click",algunCallback())
+    /* aceptar.addEventListener("click",()=>{
+            algunCallback()
+        })
+    */
+    cancelar.addEventListener("click",()=>{
+        document.body.removeChild(div)
+    })
+    
+
+    div.appendChild(p)
+    div.appendChild(aceptar)
+    div.appendChild(cancelar)
+    document.body.appendChild(div)
+})
+
+
+
+const algunCallback = (a) => {
+    location = a.href
+}

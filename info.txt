@@ -1,5 +1,5 @@
 profe : horacio.estevez@gmail.com
-slack : react-fizzmod
+slack : fizzmod-frontend
 https://github.com/HoracioGutierrez/fizzmod-front-end
 
 git revert <commit> : Revierte los cambios de uno o mas commits o un branch entero generando mas historial en el grafo. Ideal cuando lo que quiero revertir ya esta pusheado. 

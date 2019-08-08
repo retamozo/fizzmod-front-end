@@ -1,0 +1,74 @@
+profe : horacio.estevez@gmail.com
+slack : fizzmod-frontend
+https://github.com/HoracioGutierrez/fizzmod-front-end
+
+git revert <commit> : Revierte los cambios de uno o mas commits o un branch entero generando mas historial en el grafo. Ideal cuando lo que quiero revertir ya esta pusheado. 
+
+git reset <TIPO> <commit> : 
+
+TIPOS :
+
+    --soft : Mueve el HEAD a un commit anterior y mantiene el estado del WD y el SA
+
+    --mixed : DEFAULT - Mueve el HEAD a un commit anterior y no mantiene el estado del WD y el SA pero si mantiene los cambios.
+
+    --hard : Mueve el HEAD a un commit anterior y no mantiene ningun cambio
+
+
+git reflog : Nos muestra un log de acciones de hasta 30 dias
+
+blob : Hace referencia a un archivo 
+tree : Hace referencia a un directorio. Contiene Blobs
+commit : Hace referencia a un tree y/o blob. 
+tag : 
+
+    -no anotados : Genera comentarios dentro del WD pero no agrega nada al historial
+
+    -anotados : Generan un objeto nuevo en el historial y apuntan a commits 
+
+git tag -a <nombre> -m <subject> : Genera un tag anotado , una version de lanzamiento del proyecto. Estos se pushean aparte. 
+
+git stash : es un espacio temporal donde guardar trabajo que no queremos commitear. Este trabajo se puede restaurar en cualquier momento sobre cualquier branch. 
+
+
+http://vanilla-js.com/
+http://latentflip.com/loupe/
+https://www.youtube.com/watch?v=8aGhZQkoFbQ
+https://www.youtube.com/watch?v=cCOL7MC4Pl0
+https://www.youtube.com/watch?v=XQM0K6YG18s
+https://engineering.linecorp.com/en/blog/v8-hidden-class/
+https://richardartoul.github.io/jekyll/update/2015/04/26/hidden-classes.html
+https://draft.li/blog/2016/12/22/javascript-engines-hidden-classes/
+https://hackernoon.com/javascript-v8-engine-explained-3f940148d4ef
+
+Memory Managment : 
+https://www.youtube.com/watch?v=AeUCN2lPqL8
+
+
+OOP_1 : 
+
+https://www.youtube.com/watch?v=PMfcsYzj-9M
+https://www.youtube.com/watch?v=pKJG6u2kuFw
+https://www.youtube.com/watch?v=Yvf_kUBZmXg
+
+
+OOP_2 : 
+
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/freeze
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/seal
+https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/preventExtensions
+
+
+Links Interesantes de Front End :
+
+https://threejs.org/
+https://vaalentin.github.io/2015/
+https://tympanus.net/Development/PerspectivePageViewNavigation/index5.html
+https://tympanus.net/Development/3DEffectMobileShowcase/index2.html
+https://tympanus.net/Development/CreativeLinkEffects/
+https://tympanus.net/Development/Interactive3DMallMap/
+https://animejs.com/documentation/#pennerFunctions
+
+
+
+Node.js : Entorno de desarrollo que puede correr JS 

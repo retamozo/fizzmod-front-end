@@ -1,0 +1,147 @@
+NPM : Node Package Manager
+
+npm {install|i} <tipo> <paquete> : Instala un paquete
+
+    -g              : Global
+    -S|--save       : Produccion
+    -D|--save-dev   : Desarrollo 
+
+npm i -g create-react-app
+
+
+----------------------------------------
+
+
+
+/**
+ * React se separa en : react y react-dom 
+ * 
+ * 1 - Tiene que SIEMPRE estar la variable React en scopa
+ * 2 - Un componente de React es una funcion. 
+ * 3 - Todos los componentes de React TIENEN QUE retornar : React.Component - String - DomNode
+ * 4 - Todos los componentes de React van en mayuscula
+ * 5 - Los componentes, para ejecutarlos, se escriben en JSX : 
+ * 
+ *  function App(){}
+ * 
+ *  App()   ===     <App/>
+ * 
+ */
+//ES6
+import React from "react"
+import ReactDOM from "react-dom"
+//CommonJS
+//const React = require("react")
+let App = () => "Hola Mundo"
+
+ReactDOM.render(
+    <App/>,
+    document.getElementById("root")
+)
+
+
+
+
+
+Componente Flecha
+let App = () => <p>Hola Mundo</p> 
+
+Componente Standard
+function App(){
+    return <p>Hola Mundo</p>
+}
+
+
+
+
+Componente Clase 
+
+class App extends Component {
+
+    render(){
+        return 
+    }
+}
+
+
+- Todos los componentes pueden tener su propio estado(state) y/o pueden recibir parametros(props). El state, por default, SOLO se puede crear en un componente de tipo class y SOLO puede ser modificado por aquel componente que lo crea. Los props son de solo lectura y se pasan en JSX como atributos de HTML. 
+
+- El pasaje de información de componente a componente es unidireccional y solo puede ir de componente padre a componente hijo. 
+
+- El estado de un componente NO se puede cambiar por asignacion de variable, es decir : 
+
+    this.state = { contador : 0 }
+
+    this.state.contador = nuevo_valor
+
+Para modificarlo, se usa this.setState() : 
+
+    this.setState({contador : nuevo_valor})
+
+
+Dado que muchos metodos los vamos a querer pasar como props, tenemos que mantener el contexto(this) de cada uno con el this que esta en el constructor() entonces : 
+
+    this.metodo = this.metodo.bind(this)
+
+
+
+
+
+
+function Foo(){
+
+}
+
+Foo()  === <Foo/>
+
+
+PROPS DISPONIBLES : 
+
+
+- Expresion de JS
+<Foo test={1+1} />
+<Foo test={()=>{}} />
+
+
+- String
+<Foo test="" />
+
+- Boolean
+<Foo test />
+
+
+
+
+DESTRUCTURING : 
+
+let arr = [1,2,3]
+
+let [uno,dos,tres] = arr
+
+let uno = arr[0]
+let dos = arr[1]
+let tres = arr[2]
+
+
+let obj = {x:1,y:2,z:3}
+
+let {x:x,y:y,z:z} = obj
+
+//Object Shorthand
+let {x,y,z} = obj
+
+let x = obj.x
+let y = obj.y
+let z = obj.z
+
+
+
+export default ({links}) => 
+            <header>
+                <h1>SPA</h1>
+                <nav>
+                    {links.map(link=>
+                        <a href="#" key={link} >{link}</a>    
+                    )}
+                </nav>
+            </header>

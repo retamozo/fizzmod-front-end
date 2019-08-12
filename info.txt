@@ -1,9 +1,0 @@
-NPM : Node Package Manager
-
-npm {install|i} <tipo> <paquete> : Instala un paquete
-
-    -g              : Global
-    -S|--save       : Produccion
-    -D|--save-dev   : Desarrollo 
-
-npm i -g create-react-app

@@ -145,3 +145,38 @@ export default ({links}) =>
                     )}
                 </nav>
             </header>
+
+
+OPERADOR REST/SPREAD (...)
+
+
+let arr = [1,2,3,4,5,6]
+//Separá todas las cosas que quedaron sueltas y juntalas en la variable elResto
+let [uno,dos,...elResto] = arr
+console.log(uno,dos)
+console.log(elResto)
+
+//Agarra todo lo que hay en el objeto obj y separalos en sus propias unidades 
+let obj = {x:1,y:2,y:3}
+let copia = {...obj}
+
+let copia = Object.assign({},obj)
+
+
+
+PUSH PURO(?)
+
+LA VIEJA 
+
+let copia = this.state.usuarios.slice(0)
+copia.push(this.state.usuario) 
+
+LA NUEVA
+let copia = [...this.state.usuarios,this.state.usuario]
+
+
+REDUX : Es una libreria para manejar el estado de una aplicación - No tiene nada que ver con React 
+
+react-redux : Es una libreria que integra redux con React
+
+npm i [--save|-S] redux react-redux

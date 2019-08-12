@@ -12,7 +12,8 @@ class App extends Component {
             links : [ "perfil" , "portfolio" , "contacto" ],
             contador : 0,
             mostrar : false,
-            usuario : ""
+            usuario : "",
+            usuarios : []
         }
         this.aumentarContador = this.aumentarContador.bind(this)
         this.mostrarFormulario = this.mostrarFormulario.bind(this)
@@ -34,10 +35,14 @@ class App extends Component {
 
     handleSubmit(e){
         e.preventDefault()
+        this.setState({ 
+            usuarios : [...this.state.usuarios,this.state.usuario] ,
+            usuario : ""
+        })
     }
 
     render(){
-        let {links,contador,mostrar,usuario} = this.state
+        let {links,contador,mostrar,usuario,usuarios} = this.state
         return (
             <Fragment>
                 <Header links={links}/>
@@ -48,6 +53,7 @@ class App extends Component {
                         handleChange={this.handleChange}
                         handleSubmit={this.handleSubmit}
                         usuario={usuario}
+                        usuarios={usuarios}
                     /> 
                     : null
                 }

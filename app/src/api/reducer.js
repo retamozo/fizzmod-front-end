@@ -3,7 +3,7 @@ let estadoInicial = {
 }
 
 let reducer = (estado=estadoInicial,action) => {
-    switch(action){
+    switch(action.type){
         case "CONTADOR_AUMENTAR" : 
             return {...estado , contador : estado.contador + 1}
         case "CONTADOR_DISMINUIR" : 

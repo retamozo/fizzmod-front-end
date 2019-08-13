@@ -207,3 +207,15 @@ IMPLEMENTACION DE REDUX
 
 * Nota : Podemos activar la consola de redux en cualquier momento siguiendo este link : 
     
+
+
+
+https://tinyurl.com/y3y7mvbe
+
+1 - Pasar el state "links" del componente App al store de redux
+2 - Conectar el componente Header para poder consumir el array de links desde redux y no desde el state de App
+3 - Pasar el <button> que modifica el state "mostrar" del componente App adentro del componente Formulario
+4 - Pasar el state "mostrar" , "usuario" y "usuarios" de App al store de redux
+5 - Conectar el componente Formulario para que consuma las propiedades del punto anterior desde redux
+6 - Implementar actions tales como los metodos que teniamos en app 
+7 - Conectar los metodos con la funcion dispatch dentro de Formulario para que vuelva a funcionar el submit y el change 

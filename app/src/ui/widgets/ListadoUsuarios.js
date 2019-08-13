@@ -7,8 +7,8 @@ export default class ListadoUsuarios extends Component {
         return (
             <ul>
             {usuarios.length
-            ? usuarios.map(usuario=>
-                <Usuario key={usuario} usuario={usuario}/>
+            ? usuarios.map((usuario,i)=>
+                <Usuario key={i} usuario={usuario}/>
             )
             : <li>No tenes usuarios</li> }
             </ul>

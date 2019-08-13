@@ -180,3 +180,30 @@ REDUX : Es una libreria para manejar el estado de una aplicación - No tiene nad
 react-redux : Es una libreria que integra redux con React
 
 npm i [--save|-S] redux react-redux
+
+
+src/
+    |_ui
+    |_api
+        |_ store.js
+        |_ reducer.js
+        |_ actions / 
+            |_ Formulario.js       
+        |_ reducers/
+            |_ Formulario.js
+
+
+IMPLEMENTACION DE REDUX
+
+1 - Crear un store con createStore
+2 - Meter toda la aplicacion adentro de un <Provider>
+3 - Pasarle el store al provider por prop. 
+
+* Nota : El componente Provider asegura que cualquier componente hijo de la aplicación que envuelve puede tomar datos directamente del store sin pasar por toda la cadena de props 
+
+4 - Crear un reducer como una funcion pura que toma un estado anterior o inicial y un action, que puede ser cualquier cosas
+5 - Completar el reducer con todos los cambios posibles de la aplicación 
+6 - Pasar el reducer como parametro al store
+
+* Nota : Podemos activar la consola de redux en cualquier momento siguiendo este link : 
+    

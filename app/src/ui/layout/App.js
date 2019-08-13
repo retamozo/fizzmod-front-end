@@ -3,6 +3,7 @@ import Header from "./Header"
 import Main from "./Main"
 import Footer from "./Footer"
 import Formulario from "../widgets/Formulario"
+import Contador from "../widgets/Contador"
 
 class App extends Component {
 
@@ -10,7 +11,6 @@ class App extends Component {
         super()
         this.state = {
             links : [ "perfil" , "portfolio" , "contacto" ],
-            contador : 0,
             mostrar : false,
             usuario : "",
             usuarios : []
@@ -46,8 +46,7 @@ class App extends Component {
         return (
             <Fragment>
                 <Header links={links}/>
-                <p>Contador : {contador}</p>
-                <button onClick={this.aumentarContador}>+</button>
+                <Contador/>
                 {mostrar ? 
                     <Formulario 
                         handleChange={this.handleChange}

@@ -244,3 +244,27 @@ Route : Establece un componente por URL. Las URLs no hay que definirlas antes, s
 
 
 Link / NavLink : Nos devuelve un <a> preconfigurado para cancelar el default del click y usa algun sistema de historial 
+
+
+
+
+CICLOS DE VIDA : 
+
+mount 
+
+    constructor
+    componentWillMount
+    render 
+    componentDidMount
+
+update
+
+    render
+    shouldComponentUpdate 
+
+unmount 
+
+    willComponentUnmount
+
+
+    npm i --save redux-thunk

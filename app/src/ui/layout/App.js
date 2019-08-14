@@ -10,7 +10,6 @@ class App extends Component {
     constructor(){
         super()
         this.state = {
-            links : [ "perfil" , "portfolio" , "contacto" ],
             mostrar : false,
             usuario : "",
             usuarios : []
@@ -40,8 +39,8 @@ class App extends Component {
         let {links,contador,mostrar,usuario,usuarios} = this.state
         return (
             <Fragment>
-                <Header links={links}/>
-                <Contador/>
+                <Header/>
+                {/* <Contador/>
                 {mostrar ? 
                     <Formulario 
                         handleChange={this.handleChange}
@@ -51,8 +50,8 @@ class App extends Component {
                     /> 
                     : null
                 }
-                <button onClick={this.mostrarFormulario}>mostrar</button>
-                <Main/>
+                <button onClick={this.mostrarFormulario}>mostrar</button> */}
+                <Main />
                 <Footer/>
             </Fragment>
         )

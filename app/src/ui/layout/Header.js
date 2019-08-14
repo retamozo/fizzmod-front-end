@@ -1,17 +1,25 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux"
+import { NavLink } from "react-router-dom"
 
-export default class Header extends Component {
+class Header extends Component {
     render() {
         let {links} = this.props
         return (
             <header>
-                <h1>SPA</h1>
+                <NavLink to="/" exact>
+                    <h1>SPA</h1>
+                </NavLink>
                 <nav>
-                {links.map(link=>
-                    <a href="#" key={link} >{link}</a>    
+                {links.map((link,i)=>
+                    <NavLink to={`/${link}`} key={i} >{link}</NavLink>
                 )}
                 </nav>
             </header>
         )
     }
 }
+
+export default connect(store=>({
+    links : store.links
+}))(Header)

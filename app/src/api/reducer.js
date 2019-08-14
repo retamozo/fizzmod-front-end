@@ -1,5 +1,6 @@
 let estadoInicial = {
-    contador : 0
+    contador : 0,
+    links : [ "perfil" , "portfolio" , "contacto" ]
 }
 
 let reducer = (estado=estadoInicial,action) => {

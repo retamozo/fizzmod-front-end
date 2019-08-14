@@ -219,3 +219,28 @@ https://tinyurl.com/y3y7mvbe
 5 - Conectar el componente Formulario para que consuma las propiedades del punto anterior desde redux
 6 - Implementar actions tales como los metodos que teniamos en app 
 7 - Conectar los metodos con la funcion dispatch dentro de Formulario para que vuelva a funcionar el submit y el change 
+
+
+
+
+
+react-router
+react-router-dom
+https://reacttraining.com/react-router/web/guides/philosophy
+
+Router : Envuelve a la aplicacion en un HoC y le permite a cualquier componente de React usar cualquier componente de la libreria. Para esto, la libreria nos da 4 routers distintos :
+
+    BrowserRouter : Usa la API de History 
+
+    HashRouter : Usa la porcion de hash del location
+
+    MemoryRouter : Para todo navegador que no soporte hash ni History
+
+    StaticRouter : SSR(Server-Side Rendering)
+
+
+
+Route : Establece un componente por URL. Las URLs no hay que definirlas antes, son dinamicas. 
+
+
+Link / NavLink : Nos devuelve un <a> preconfigurado para cancelar el default del click y usa algun sistema de historial 

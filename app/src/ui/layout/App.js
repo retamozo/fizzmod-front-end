@@ -7,7 +7,6 @@ import Formulario from "../widgets/Formulario"
 let App = () =>
     <Fragment>
         <Header/>
-        <Formulario/> 
         <Main />
         <Footer/>
     </Fragment>

@@ -19,6 +19,8 @@ export let mostrarFormulario = () => ({type:"FORM_MOSTRAR"})
 export let pedirUsuarios = () => {
     return dispatch => {
         
+        dispatch({type:"USUARIOS_FETCHING"})
+
         fetch(`${url}users`)
         .then(res=>res.json())
         .then(res=>{

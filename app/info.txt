@@ -268,3 +268,16 @@ unmount
 
 
     npm i --save redux-thunk
+
+
+https://www.meteor.com/developers
+http://docs.vulcanjs.org/
+https://fusionjs.com/
+https://material-ui.com/
+https://nextjs.org/docs
+https://docs.nestjs.com/
+https://alain.xyz/libraries/react-anime
+https://animejs.com/documentation/#lineDrawing
+https://mdbootstrap.com/docs/react/components/dropdowns/
+https://reactstrap.github.io/components/alerts/
+https://react-bootstrap.github.io/

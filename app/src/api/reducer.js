@@ -5,7 +5,9 @@ let estadoInicial = {
     usuarios : [],
     mostrar : false,
     usuarios_fetch : [],
-    error : null
+    error : null,
+    fetching : false,
+    fetched : false
 }
 
 let reducer = (estado=estadoInicial,action) => {
@@ -22,10 +24,12 @@ let reducer = (estado=estadoInicial,action) => {
             return {...estado , usuario : action.payload }
         case "FORM_MOSTRAR" :
             return {...estado , mostrar : !estado.mostrar }
+        case "USUARIOS_FETCHING" :     
+            return {...estado , fetching : true }
         case "USUARIOS_FETCH" : 
-            return {...estado , usuarios_fetch : [...action.payload] }
+            return {...estado , usuarios_fetch : [...action.payload] , fetching : false , fetched : true }
         case "USUARIOS_ERROR" :
-            return {...estado , error : "Hubo un error"}
+            return {...estado , error : "Hubo un error" , fetching : false}
         default : 
             return estado 
     }
